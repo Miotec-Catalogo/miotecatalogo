@@ -198,8 +198,13 @@ function dibujarProductos() {
         <div class="info">
           <div class="codigo">Código: ${p.codigo}</div>
           <h2 class="nombre">${p.nombre}</h2>
-          <div class="precio">Unidad: ${formatoPrecio(p.precio)}</div>
-          <div class="mayor">Por mayor: ${formatoPrecio(p.mayor)}</div>
+          <div class="precio-box">
+  <div class="precio-etiqueta">PRECIO POR UNIDAD</div>
+  <div class="precio">${formatoPrecio(p.precio)}</div>
+  <div class="precio-etiqueta">PRECIO POR MAYOR</div>
+  <div class="mayor">${formatoPrecio(p.mayor)}</div>
+</div>
+
           <button class="ver" onclick="verDetalle('${p.codigo}')">Ver detalles</button>
         </div>
       </article>`).join("")
