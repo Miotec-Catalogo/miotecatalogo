@@ -205,13 +205,28 @@ const formatoPrecio = valor => valor > 0
   ? "S/ " + Number(valor).toFixed(2)
   : "Por actualizar";
 
+
 function dibujarCategorias(lista) {
-  const nombres = ["Todas", ...new Set(lista.map(p => p.categoria).filter(Boolean))];
+  const nombres = [
+    "Todas",
+    "AUDIO",
+    "AUTOMOTRIZ",
+    "COMPUTO",
+    "HERRAMIENTAS",
+    "HOGAR",
+    "ILUMINACION",
+    "JUGUETERIA",
+    "OTROS",
+    "TELEFONIA",
+    "VIDEO"
+  ];
+
   document.getElementById("categorias").innerHTML = nombres.map(c =>
     `<button class="${c === categoriaActiva ? "activo" : ""}"
       onclick="elegirCategoria(${JSON.stringify(c).replace(/"/g, '&quot;')})">${c}</button>`
   ).join("");
 }
+
 
 function elegirCategoria(categoria) {
   categoriaActiva = categoria;
