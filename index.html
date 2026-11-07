@@ -118,6 +118,40 @@ dialog::backdrop { background: #061b30aa; }
   header { padding: 22px 5%; }
 }
 @media(max-width: 360px) { .productos { grid-template-columns: 1fr; } }
+
+/* MEJORAS VISUALES MIOTEC */
+body {
+  background-color: #071b3b;
+  background-image:
+    radial-gradient(ellipse at top, #123f78 0%, transparent 65%),
+    linear-gradient(135deg, #06152e, #0b2b55);
+  color: #ffffff;
+}
+
+header, .encabezado, .hero {
+  border-color: rgba(80, 175, 255, 0.25);
+}
+
+input, select {
+  border: 1px solid #3b82b8;
+  border-radius: 10px;
+}
+
+button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(0, 145, 255, 0.25);
+}
+
+.producto, .tarjeta, .product-card {
+  border: 1px solid rgba(70, 160, 255, 0.22);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
 </style>
 </head>
 <body>
