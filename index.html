@@ -839,20 +839,7 @@
         dibujarCategorias();
         dibujarProductos();
       })
-      .catch(error => {
-        console.error("Error al cargar los productos:", error);
-
-        elementoResumen.textContent = "No se pudo cargar el catálogo";
-
-        elementoProductos.innerHTML = `
-          <div class="estado">
-            <strong>No se pudieron cargar los productos.</strong>
-            Verifica que el archivo <b>productos.json</b> esté en la misma
-            carpeta que <b>index.html</b> y que el archivo contenga datos válidos.
-            Después, vuelve a cargar la página.
-          </div>
-        `;
-      });
+      
   </script>
 </body>
 </html>
