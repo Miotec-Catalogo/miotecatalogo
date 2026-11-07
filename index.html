@@ -327,17 +327,21 @@
       font-weight: 600;
     }
 
-    .precio-valor {
-      color: var(--azul-oscuro);
-      font-size: 14px;
-      font-weight: 800;
-      white-space: nowrap;
-      font-variant-numeric: tabular-nums;
-    }
+   /* Precio por unidad: más pequeño */
+.precio-valor {
+  color: var(--azul-oscuro);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
 
-    .precio-fila.mayor .precio-valor {
-      color: var(--azul);
-    }
+/* Precio por mayor: un poco más grande */
+.precio-fila.mayor .precio-valor {
+  color: var(--azul);
+  font-size: 16px;
+  font-weight: 800;
+}
 
     .boton-detalle {
       width: 100%;
