@@ -206,6 +206,7 @@ const formatoPrecio = valor => valor > 0
   : "Por actualizar";
 
 
+
 function dibujarCategorias(lista) {
   const nombres = [
     "Todas",
@@ -216,9 +217,9 @@ function dibujarCategorias(lista) {
     "HOGAR",
     "ILUMINACION",
     "JUGUETERIA",
-    "OTROS",
+    "VIDEO",
     "TELEFONIA",
-    "VIDEO"
+    "OTROS"
   ];
 
   document.getElementById("categorias").innerHTML = nombres.map(c =>
@@ -226,7 +227,6 @@ function dibujarCategorias(lista) {
       onclick="elegirCategoria(${JSON.stringify(c).replace(/"/g, '&quot;')})">${c}</button>`
   ).join("");
 }
-
 
 function elegirCategoria(categoria) {
   categoriaActiva = categoria;
