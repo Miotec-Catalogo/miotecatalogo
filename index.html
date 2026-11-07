@@ -300,7 +300,7 @@ fetch("./productos.json")
     dibujarCategorias(productosDemo);
     dibujarProductos();
   })
-  .catch(error => {
+   .catch(error => {
     console.error("Error al cargar los productos:", error);
     document.getElementById("resumen").textContent =
       "No se pudieron cargar los productos. Revisa productos.json.";
