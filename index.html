@@ -288,8 +288,23 @@ function verDetalle(codigo) {
 document.getElementById("buscar").addEventListener("input", dibujarProductos);
 document.getElementById("orden").addEventListener("change", dibujarProductos);
 
-dibujarCategorias(productosDemo);
-dibujarProductos();
+fetch("./productos.json")
+  .then(respuesta => {
+    if (!respuesta.ok) {
+      throw new Error("No se pudo cargar productos.json");
+    }
+    return respuesta.json();
+  })
+  .then(productos => {
+    productosDemo = productos;
+    dibujarCategorias(productosDemo);
+    dibujarProductos();
+  })
+  .catch(error => {
+    console.error("Error al cargar los productos:", error);
+    document.getElementById("resumen").textContent =
+      "No se pudieron cargar los productos. Revisa productos.json.";
+  });
 </script>
 </body>
 </html>
